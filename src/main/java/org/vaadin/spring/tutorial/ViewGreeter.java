@@ -1,6 +1,6 @@
 package org.vaadin.spring.tutorial;
 
-import org.vaadin.guice.annotation.ViewScope;
+import com.vaadin.guice.annotation.ViewScope;
 
 @ViewScope
 public class ViewGreeter {

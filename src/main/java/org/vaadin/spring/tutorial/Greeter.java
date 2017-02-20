@@ -1,6 +1,6 @@
 package org.vaadin.spring.tutorial;
 
-import org.vaadin.guice.annotation.UIScope;
+import com.vaadin.guice.annotation.UIScope;
 
 @UIScope
 public class Greeter {

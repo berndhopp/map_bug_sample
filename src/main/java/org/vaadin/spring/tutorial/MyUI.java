@@ -4,15 +4,15 @@ import com.google.inject.Inject;
 import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
+import com.vaadin.guice.annotation.Configuration;
+import com.vaadin.guice.annotation.GuiceUI;
+import com.vaadin.guice.server.GuiceVaadinServlet;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
-import org.vaadin.guice.annotation.GuiceUI;
-import org.vaadin.guice.annotation.GuiceVaadinConfiguration;
-import org.vaadin.guice.server.GuiceVaadinServlet;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -58,7 +58,7 @@ public class MyUI extends UI {
 
     @WebServlet(urlPatterns = "/*", name = "MapServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
-    @GuiceVaadinConfiguration(basePackages = "org.vaadin.spring.tutorial")
+    @Configuration(basePackages = "org.vaadin.spring.tutorial")
     public static class MapServlet extends GuiceVaadinServlet {
     }
 }

@@ -1,13 +1,13 @@
 package org.vaadin.spring.tutorial;
 
 import com.google.inject.Inject;
-import org.vaadin.guice.annotation.GuiceView;
+import com.vaadin.guice.annotation.GuiceView;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
-@GuiceView(ViewScopedView.VIEW_NAME)
+@GuiceView(name=ViewScopedView.VIEW_NAME)
 public class ViewScopedView extends VerticalLayout implements View {
     public static final String VIEW_NAME = "view";
 
